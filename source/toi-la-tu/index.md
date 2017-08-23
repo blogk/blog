@@ -1,5 +1,5 @@
 ---
-title: Về tôi
+title: Tôi là Tú
 header-img: img/home-bg.jpg
 id: 2
 comment: false
@@ -23,5 +23,6 @@ Trước mình có viết Blog ở trang **tutran.net** rồi đến **tutran.me
 
 Thông tin bản thân:
 - Số đo 3 vòng: xx-xx-xx
-- Email: [contact@blogk.xyz](mailto:contact@blogk.xyz)
-- Facebook: [fb.com/tutv95](http://fb.com/tutv95)
+- Email: [tutv95[at]gmail.com](mailto:tutv95@gmail.com)
+- Facebook: [tutv95](http://fb.com/tutv95)
+- GitHub: [tutv95](https://github.com/tutv95)
