@@ -23,15 +23,13 @@ SEOTitle: BlogK - Share what I know
 email: tutv95@gmail.com
 description: ""
 keyword: ""
-header-img: img/header_img/home-bg-2-dark.png
-signature: true #show signature
-signature-img: img/signature/BeanTechSign-white.png 
+header-img: img/header_img/background-dev.jpg
+signature: false #show signature
+blog-img: img/blog-bg.jpg
 
 
 # SNS settings
-# RSS: false
-# weibo_username:     Demonbaneen
-# zhihu_username:     Demonbane
+RSS: true
 github_username:    tutv95
 twitter_username:   tutv95
 facebook_username:  tutv95
@@ -54,8 +52,8 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
-ga_domain: yoursite
+ga_track_id: 'UA-60224927-2'          # Format: UA-xxxxxx-xx
+ga_domain: blogk.xyz
 
 
 # Sidebar settings
@@ -66,9 +64,8 @@ widgets:
 - featured-tags
 - short-about
 - recent-posts
-- friends-blog
-# - archive
-# - category
+- category
+- archive
 
 # widget behavior
 ## Archive
@@ -83,19 +80,6 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 ## Friends
 friends: [
-    {
-        title: "Bean Tech",
-        href: "http://beantech.org"
-    },{
-        title: "Kaijun's Blog",
-        href: "http://blog.kaijun.rocks"
-    },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "It Helps SEO",
-        href: "#"
-    }
 ]
 
 
