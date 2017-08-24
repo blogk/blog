@@ -81,18 +81,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %> 
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
-                    <span style="display: inline-block; margin: 0 5px;">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
-                    </iframe>
+                    Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %>
                 </p>
             </div>
         </div>
@@ -182,23 +171,4 @@
 </script>
 
 <% } %>
-
-
-<!-- Baidu Tongji -->
-<% if (config.ba_track_id) { %>
-<script>
-    // dynamic User by Hux
-    var _baId = '<%= config.ba_track_id %>';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<% } %>
-
 
