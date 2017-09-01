@@ -17,7 +17,7 @@ header-img:
 
 ### Gulp là gì?
 
-![gulp](http://blogk.xyz/wp-content/uploads/2016/06/gulp.png)
+![gulp](../media/gulp.png)
 
 Theo như bác Gồ: **[Gulp](http://gulpjs.com/)** là một package của Node.js, nó là 1 trình quản lý các task. Kết hợp với 1 số plugin, Gulp giúp các developer (chủ yếu là các Web developer) tự động quá 1 số thao tác như compile SASS/LESS, minify CSS, Javascript, tự động compile khi các file được thay đổi, dọn dẹp file rác, unit testing, etc.
 
@@ -29,21 +29,21 @@ Do Gulp chạy trên nền **Node.js** nên tất nhiên bạn phải cài Node.
 
 Sau khi đã có **node **và **npm** ta sẽ cài tiếp đến gulp ở global để có thể gõ lệnh <kbr>gulp</kbr>
 
-<pre>
+```
 npm i -g gulp
-</pre>
+```
 
 và gulp ở project mình đang chạy để require vào file **Gulpfile.js** ở phía dưới.
 
-<pre>
+```
 npm i --save-dev gulp
-</pre>
+```
 
 ### Cơ chế hoạt động
 
 Gulp hoạt động theo cơ chế **pipe line** (kiểu đường ống).
 
-![gulp_single_pipe](http://blogk.xyz/wp-content/uploads/2016/06/gulp_single_pipe.png)
+![gulp_single_pipe](../media/gulp_single_pipe.png)
 
 Nhìn hình bạn có thể hiểu: Đầu tiên sẽ của đầu vào gọi là **source** tương ứng với **gul.src**, sau đó qua các bộ xử lý (ví dụ như coffee(), uglify() như trong hình), cuối cùng ta được đầu ra gọi là **destination** tương ứng với **gul.dest**. Ngoài ra thì nó còn có thể tạo ra đường ống nhưng với nhiều đầu ra bằng các tạo ra nhiều **gul.dest**.
 
@@ -55,7 +55,7 @@ Vậy là đủ đề hiểu cơ bản về cơ chế hoạt động của Gulp 
 
 Code cơ bản với gulp sẽ có kiểu như này:
 
-<pre lang="javascript">
+```
 var gulp = require('gulp');
 
 gulp.task('default', function(){
@@ -65,31 +65,31 @@ gulp.task('default', function(){
 gulp.task('other_task', function(){
    // Other task code
 });
-</pre>
+```
 
 Sau đó ta chạy lệnh:
 
-<pre>
+```
 gulp task_name
-</pre>
+```
 
 Để chạy task theo ý muốn hoặc chỉ cần gọi lệnh **gulp** để chạy task mặc định **default**. Chúng ta cũng có thể **chạy nhiều task** cùng lúc bằng cách gõ thêm tên các task phía sau:
 
-<pre>
+```
 gulp task_a task_b other_task
-</pre>
+```
 
 ### Sử dụng để dịch SASS
 
 Để dịch SASS ta sử dụng thêm 1 package nữa là **gulp-sass** và cài đặt như sau:
 
-<pre>
+```
 npm i --save-dev gulp-sass
-</pre>
+```
 
 Sau đó ta sẽ tạo thêm 1 task nữa ở **Gulpfile.js** như sau:
 
-<pre lang="javascript">
+```
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
@@ -98,7 +98,7 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest(''));
 });
-</pre>
+```
 
 Sau đó chạy lệnh **gulp sass** để biên dịch từ file **scss** sang file **css**.
 
@@ -118,7 +118,7 @@ Sau đó chạy lệnh **gulp sass** để biên dịch từ file **scss** sang 
 
 Tạo file **Gulpfile.js** với nội dung sau:
 
-<pre lang="javascript">
+```
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
@@ -135,15 +135,15 @@ gulp.task('watch', function () {
     livereload.listen();
     gulp.watch(['path/sass/**/*'], ['sass']);
 });
-</pre>
+```
 
 Bạn có thể thấy, ở task **watch** mình sẽ **lắng nghe sự thay đổi** của các file scss nếu có sự thay đổi mình sẽ gọi tới task **sass**. Ở task **sass**, cuối đường ống mình chạy **livereload()** để thông báo với trình duyệt là đã compile xong scss.
 
 Chạy lệnh:
 
-<pre>
+```
 gulp watch
-</pre>
+```
 
 À tí quên! Để kết nối với trình duyệt ta cần sử dụng thêm một extension nữa các bạn tự tải ở [đây](http://livereload.com/extensions/) tùy vào trình duyệt bạn đang dùng (thằng Firefox thì không có bản Live nên phải config hơi phức tạp tí) . Nó sẽ tự động đọc lại file css đã được biên dịch, nó giúp chúng ta tiết kiệm thời gian và giúp phím F5 của bạn không bị hỏng, các Dev front-end thích điều này :))
 
@@ -161,7 +161,7 @@ Ngoài ra còn có rất nhiều plugins của Gulp với nhất nhiều tính n
 
 Đây là 1 ví dụ khá hoàn chỉnh 1 file Gulpfile.js mình hay dùng:
 
-<pre lang="javascript">
+```
 // Include gulp
 var gulp = require('gulp');
 
@@ -190,7 +190,7 @@ gulp.task('watch', function () {
 
 // Default Task
 gulp.task('default', ['sass', 'watch']);
-</pre>
+```
 
 Sau đó chạy lệnh **gulp** là xong! Mọi việc cứ để Gulp lo :D
 
