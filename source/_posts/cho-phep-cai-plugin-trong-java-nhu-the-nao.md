@@ -14,7 +14,7 @@ header-img:
 
 Chả là đang tập tọe làm wordpress plugin, bỗng dưng nảy ra câu hỏi thế cài đặt plugin trong java như thế nào. Trước giờ cũng chỉ làm theo kiểu yêu cầu đến đâu viết đến đấy chứ chưa được làm kiểu plugin này bao giờ cả. Đành hỏi bác Gúc vậy. Sau một hồi đào bới cũng gọi là nắm đưọc đôi phần, note ra đây cho bác nào cùng chung thắc mắc.
 
-![plugin](http://blogk.xyz/wp-content/uploads/2016/08/plugin.jpg)
+![plugin](../media/plugin.jpg)
 
 <!--more-->
 
@@ -32,7 +32,7 @@ Với cộng đồng mã nguồn mở phát triển như vũ bão ngày nay, v�
 
 Đối với các script language như Javascript, PHP, python… với dặc điểm mỗi lần chạy là một lần **thông dịch** thì có vẻ không gặp trở ngại gì chỉ việc dùng một thằng callback là xong cái này mình sẽ nói đến vào một ngày đẹp trời không xa. Với Java câu chuyện có vẻ không dễ dàng như thế, Java thì khônng có callback hay cái gì tượng tự cả, mình thì gà Java nên cũng thấy vụ này hơi khoai một chút.
 
-![application-architecture](http://blogk.xyz/wp-content/uploads/2016/08/application-architecture.jpg)
+![application-architecture](../media/application-architecture.jpg)
 
 Về cơ bản để có thể cắm được plugin thì ứng dụng phải có kiến trúc đơn giản nhất như trong hình trên, hai thành phần cơ bản đó là **application core** và **plugin manager**:
 - **application core:** thằng này là ứng dụng chủ có nhiệm bụ bào đảm logic của hệ thống, thực hiện các tác vụ và hook (gọi) các plugin thực hiện nhiệm vụ của mình trong runtime.
@@ -48,7 +48,8 @@ Hì, mình giải thích củ chuối quá chắc ko ai hiểu nổi nhỉ. Đ�
 
 Ok, đầu tiên chúng ta phải có một thằng interface chung cho các plugins. tạm gọi là **`PluginFunction.java`** đi.
 
-<pre class="lang:1c-zapros decode:true " title="PluginFunction.java">public interface PluginFunction {
+```
+public interface PluginFunction {
 
 	// let the application pass in a parameter
 	public void setParameter (int param);
@@ -62,10 +63,12 @@ Ok, đầu tiên chúng ta phải có một thằng interface chung cho các plu
 	// can be called to determine whether the plugin
 	// aborted execution due to an error condition
 	public boolean hasError();
-}</pre>
+}
+```
 
 Tiếp theo ta phải có một cái main để chạy logic của ứng dụng và gọi các plugin, ta gọi là `PluginDemo.java` chứa hàm main.
-<pre class="lang:default decode:true " title="PluginDemo.java">import java.io.File;
+```
+import java.io.File;
 import java.util.*;
 
 public class PluginDemo {
@@ -153,13 +156,15 @@ public class PluginDemo {
 			}
 		}
 	}
-}</pre>
+}
+```
 Ta thấy trong hàm `getPlugins` có một vòng for để load hết các class mà có interface là `PluginFunction` rồi tạo ra một thực thể của class đó và lưu vào mảng `plugins`. Sau đó hàm `runPlugins` sẽ duyệt qua tất cả cảc plugins set tham số chạy hàm run của từng plugin và in ra kết quả.
 
 Ngoài ra hàm `getPlugins` còn có một điều thú vị nữa chính là dòng setSecurityManager, vì đây là các plugins độc lập với hệ thống nên ta phải xét quền hạn cho nó chứ nhỡ thanh niên nào vui tính lại cho cái plugin xóa hết hệ điều hành thì chỉ biết ngồi đấy mà khóc thôi 😭.
 
 Đây là nội dung file `PluginSecurityManager.java`
-<pre class="lang:default decode:true" title="PluginSecurityManager.java">import java.io.File;
+```
+import java.io.File;
 
 /**
 * This is a fairly uptight security manager subclass. Classes loaded by
@@ -264,10 +269,13 @@ public class PluginSecurityManager extends SecurityManager {
 		trusted();
 		return true; 
 	}
-}</pre>
+}
+```
 
 Ngoài ra ta còn cần 1 cái loader để load các plugins ra nữa `PluginClassLoader.java`
-<pre class="lang:default decode:true " title="PluginSecurityManager.java">import java.io.*;
+
+```
+import java.io.*;
 
   /**
    * In order to impose tight security restrictions on untrusted classes but
@@ -352,11 +360,13 @@ public class PluginClassLoader extends ClassLoader {
       // If anything goes wrong, throw a ClassNotFoundException error
       catch (Exception ex) { throw new ClassNotFoundException(ex.toString()); }
     }
-}</pre>
+}
+```
 Haiz, về cơ bản hệ thống setup thế là xong, tiếp theo ta sẽ cần 1 2 cái plugins để test thủ xem nó có chạy ổn không, ta sẽ đặt các file này trong thư mục `plugins`.
 
 tình bình phưng của tham số:
-<pre class="lang:default decode:true" title="Square.java">/**
+```
+/**
  * This plugin squares its argument.
  */
 
@@ -380,9 +390,10 @@ public class Square implements PluginFunction {
 	public boolean hasError() {
 		return false;
 	}
-</pre>
+```
 cộng 1 đơn vị vào tham số:
-<pre class="lang:default decode:true " title="PlusOne.java">/**
+```
+/**
  * This plugin adds one to the parameter.
  */
 
@@ -406,11 +417,13 @@ public class PlusOne implements PluginFunction {
 	public boolean hasError() {
 		return false;
 	}
-}</pre>
+}
+```
 `TryToExit.java` thử cho thanh niên này lạm quền tý xem có được không, trong `PluginSecurityManager` ta đã set không cho plugin thoát chương trình rồi.
 
 &nbsp;
-<pre class="lang:default decode:true " title="TryToExit.java">/**
+```
+/**
  * This plugin tries to call System.exit(), which the SecurityManager doesn't allow.
  */
 
@@ -435,8 +448,8 @@ public class TryToExit implements PluginFunction {
 	public boolean hasError() {
 		return false;
 	}
-}</pre>
-&nbsp;
+}
+```
 
 Tiếp theo là dịch và chạy thử, nếu không có gì sai thì sẽ thu được output như này, mình dùng java 8 nên có phun ra mấy cái Note, thôi kệ dù sao nó vẫn chạy được 😄:
 <pre class="theme:dark-terminal lang:sh decode:true ">minh@MINH-PC:~/Desktop/Plugin$ javac *.java
@@ -453,5 +466,3 @@ Xin chân thành cảm ơn bộ code mẫu của [Ulf Dittmer](http://www.javara
 
 Phùu… cảm ơn ae đã theo dõi đến tận đây, bài đã dài tay quay đã mỏi mình xin phép dừng phím tại đây. Chúc ae cuối tuần vui vẻ.
 xin chào thân ái và quết thắng.
-
-[minhlv](http://minhlv.ga)

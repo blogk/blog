@@ -49,7 +49,8 @@ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a
 
 Xong bây giờ mình chỉ cần lấy cái **Zone ID** của site và lấy cái **API Key** kia nữa là xong.
 
-[caption id="attachment_488" align="aligncenter" width="1944"]![](http://blogk.xyz/wp-content/uploads/2017/01/cloudflare-zoneid.png) Bạn có thế thấy ngay ở trong phần Overview của site.[/caption]
+![](../media/cloudflare-zoneid.png)
+Bạn có thế thấy ngay ở trong phần Overview của site.
 
 Ok. Sau đó mình nhét đoạn lệnh curl kia và 1 file tạm đặt là `dev.sh`
 

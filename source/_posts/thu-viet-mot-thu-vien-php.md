@@ -12,7 +12,7 @@ tags:
 
 Dạo này vẫn cày cuốc mấy sản phẩm bên WordPress. Hôm nọ dự án cần một thư viện để parse các file zip được đóng gói là các theme và plugin bên **WordPress**. Tay nhanh hơn não liền hỏi bác Gồ ngay :))
 
-![](http://blogk.xyz/wp-content/uploads/2017/06/wordpress.png)
+![](../media/wordpress.png)
 
 Quả trời không phụ lòng người thương cho những người ngu như mình, mình vớ ngay được một repository trên Github được viết cách đây 4 năm. Cũng thử nghiệm chạy thử cũng thấy ok nhưng không vừa ý lắm nên mình đã quyết định lôi nó về và cải tiến nó rồi lại tung lên Github cho mọi người cùng dùng.<!--more-->
 
@@ -32,17 +32,17 @@ Khổ lỗi mỗi lần viết xong lại phải chạy lệnh để test mà g�
 
 Để nâng cấp độ nguy hiểm thêm tí nữa mình tích hợp thêm thằng Travis vào nữa. Nó cho phép mình tạo ra 1 sanbox rồi test với đủ loại môi trường. Ví dụ test với các phiên bản PHP version từ 5.x đến 7.x hay cả HHVM. Travis nó không chỉ support cho PHP đâu nhé mà cả các ngôn ngữ khác, bạn nào muốn tìm hiểu chi tiết thì có thể tìm hiểu trên [docs của Travis](https://docs.travis-ci.com/).
 
-![](http://blogk.xyz/wp-content/uploads/2017/06/travis.png)
+![](../media/travis.png)
 
 Mỗi lần commit 1 travis sẽ tự động build và test cho bạn. Nếu gặp lỗi nó sẽ thông báo cho bạn biết luôn để bạn biết mà fix.
 
-![](http://blogk.xyz/wp-content/uploads/2017/06/SLB5QJP0S6egmPwwijR62g.png)
+![](../media/SLB5QJP0S6egmPwwijR62g.png)
 Đấy test ok với Travis rồi thì nhét thêm mấy icon như này vào Readme nhìn nó chuyên nghiệp hẳn phải không nào :D
 
 ## PHP có Composer phải không nào?
 
 PHP thì bạn hẳn quen với Composer để quản lý các package cũng như sự phụ thuộc của các package. Nó cũng tương tự như npm ở Node hay gem ở Ruby.
-![](http://blogk.xyz/wp-content/uploads/2017/06/PHP-Composer.png)
+![](../media/PHP-Composer.png)
 Dể support Composer thì mình cần phải cấu hình trong phần `autoload` của **Composer** để khi cài đặt package qua composer thì composer sẽ đọc file composer.json và require package theo cấu hình autoload đó. Ở package này của mình dùng kiểu autoload đơn sơ giản dị nhất là liệt kê file ra để require =)) Và cấu hình composer và sẵn sàng cho các developer cài đặt và dùng.
 
 ## Kết quả

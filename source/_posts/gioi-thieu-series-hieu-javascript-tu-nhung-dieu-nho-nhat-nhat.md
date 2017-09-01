@@ -21,7 +21,7 @@ author: Minh
 
 ### Js à, you can't "bối rối" me anymore!
 
-![](http://blogk.xyz/wp-content/uploads/2017/06/js.jpeg)
+![](../media/js.jpeg)
 
 <!--more-->
 

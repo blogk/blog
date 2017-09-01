@@ -25,14 +25,14 @@ Nếu bạn là công dân nước Việt thì hẳn bạn sẽ biết năm nay 
 
 Vèo phát 5 phút xong (các bạn thấy mình giỏi không, haha)
 
-![fireworks](http://blogk.xyz/wp-content/uploads/2017/02/screenshot.png)
+![fireworks](../media/screenshot.png)
 
 Cơ mà bây giờ muốn người khác cũng xem được thì sao? chẳng lẽ deploy lên 1 host nào đấy à? Không vậy tốn quá!
 
 Thôi thì làm local cho mỗi máy là được rồi, vậy là nghĩ ra làm extension cho Chrome.
 Vèo cái 10 phút nữa xong
 
-![firework extension](http://blogk.xyz/wp-content/uploads/2017/02/extension.png)
+![firework extension](../media/extension.png)
 
 Bây giờ chỉ cần mỗi lần bấm new tab thì bạn sẽ có một màn hình pháo hoa lung linh huyền ảo, tha hồ ngắm :p
 
@@ -42,4 +42,4 @@ Link: [https://github.com/minhnt95/firework-chrome-extension](https://github.com
 À, đến đây chắc sẽ có bạn hỏi tại sao không deploy lên Chrome Web Store cho tiện,
 Do cái này này :'(
 
-![tra phi](http://blogk.xyz/wp-content/uploads/2017/02/tra-phi.png)
+![tra phi](../media/tra-phi.png)

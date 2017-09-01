@@ -18,7 +18,7 @@ author: Minh
 
 Hồi trước đi làm test của mấy công ti thấy lạ sao họ cho nhiều câu về String thế, thực sự lúc đó tôi chỉ nghĩ **String** thì có đếch gì đâu nhỉ, chỉ là 1 mảng các char + vài hàm phụ thêm thôi chứ có gì đâu, cái cần quan tâm là Thread, là OOP kia kìa... Cho đến một ngày, tôi đã tò mò về nó và tìm hiểu, và mọi suy nghĩ hồi trước của tôi đã thay đổi... 
 
-![string la gi](http://blogk.xyz/wp-content/uploads/2016/07/ropeball.jpg)
+![string la gi](../media/ropeball.jpg)
 
 <!--more-->
 
@@ -38,16 +38,17 @@ Vậy ta cùng tìm hiểu kĩ hơn về nó nhé :D
 Thử vọc vào lớp String của JAVa xem có gì nào
 Để ý những dòng đầu tiên lớp **String.java** ta sẽ thấy 2 dòng này:
 
-<pre>/** The value is used for character storage. */
-    private final char value[];
-</pre>
+```
+/** The value is used for character storage. */
+private final char value[];
+```
 
-![1](http://blogk.xyz/wp-content/uploads/2016/07/1.png)
+![1](../media/1.png)
 
 Nếu bạn để ý thêm, bạn sẽ thấy lớp **String** này sử dụng thao tác hầu hết trên mảng value.
 Dạo qua phương thức nổi tiếng này xem sao nhé:
 
-![length](http://blogk.xyz/wp-content/uploads/2016/07/length.png)
+![length](../media/length.png)
 
 Hàm **length()** là hàm lấy độ dài chuỗi **String** và như code ta thấy hàm này trả về độ dài của mảng value kia.
 Bạn tin tôi rồi chứ, **"String là một mảng các kí tự!"**
@@ -58,7 +59,8 @@ Cho một ví dụ sau:
 **Hãy dự đoán kết quả in ra màn hình console khi compile and build đoạn chương trình sau:**
 (Trước khi đọc đáp án, tôi đề nghị bạn hãy suy nghĩ thật kĩ và đưa ra một câu trả lời cho mình, điều này rất quan trọng!)
 
-<pre>String a1 = new String("a");
+```
+String a1 = new String("a");
 String b1 = "a";
 
 String a2 = new String("a");
@@ -70,13 +72,13 @@ String b3 = "a";
 System.out.println(a1 == b1);
 System.out.println(a2 == b2);
 System.out.println(a3 == b3);
-</pre>
+```
 
 Suy nghĩ-ing .....
 
 Và đây là câu trả lời của **JVM**
 
-![example](http://blogk.xyz/wp-content/uploads/2016/07/example.png)
+![example](../media/example.png)
 
 ### Tại sao vậy?
 
@@ -115,22 +117,23 @@ Tất cả các hàm sử lí chuỗi có sẵn của lớp **String** đều tr
 Tiếp một ví dụ nữa nhé :D
 Hãy dự đoán kết quả sau khi compile and run đoạn mã sau:
 
-<pre>public static void main(String[] args) {
+```
+public static void main(String[] args) {
     String temp = "BlogK.xyz";
 
     temp.toLowerCase();
     System.out.println(temp);
 }
-</pre>
+```
 
 Kết quả:
 
-![2](http://blogk.xyz/wp-content/uploads/2016/07/2.png)
+![2](../media/2.png)
 
 Tuy được gọi hàm **toLowerCase()** nhưng đối tượng **String** vẫn không thay đổi giá trị. Nếu muốn một kết quả như mong đợi, hãy dùng một tham chiếu khác để hứng kết quả này (hoặc dùng chính tham chiếu cũ nếu bạn không muốn tạo thêm biến mới)
 Sửa lại một chút và chạy sẽ ra kết quả như mong đợi:
 
-![3](http://blogk.xyz/wp-content/uploads/2016/07/3.png)
+![3](../media/3.png)
 
 ### Dạo qua những hàm xử lí String cơ bản
 

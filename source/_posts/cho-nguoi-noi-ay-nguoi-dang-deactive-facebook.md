@@ -18,7 +18,7 @@ author: Minh
 Có bao giờ bạn quan tâm tới một người trên Facebook mà người này đang deactive tài khoản chưa?
 Nếu câu trả lời của bạn là có thì tool mình giới thiệu sau đây là dành cho bạn ;)
 
-![deactive facebook](http://blogk.xyz/wp-content/uploads/2016/12/Deactivate-Facebook-Account.jpg)
+![deactive facebook](../media/Deactivate-Facebook-Account.jpg)
 
 <!--more-->
 
@@ -33,11 +33,11 @@ Tò mò...
 Sau một vài công đoạn tìm kiếm, hỏi han đồng bọn thì cuối cùng cũng ra link.
 Nhưng mà ...
 
-![facebook 404](http://blogk.xyz/wp-content/uploads/2016/12/Screen-Shot-2016-12-01-at-9.14.44-PM.png)
+![facebook 404](../media/Screen-Shot-2016-12-01-at-9.14.44-PM.png)
 
 ....hiu... hiu... hiu ...
 
-![hiu hiu hiu](http://blogk.xyz/wp-content/uploads/2016/12/tuzki-crying.png)
+![hiu hiu hiu](../media/tuzki-crying.png)
 
 Làm sao giờ? chẳng lẽ ngồi F5 như hồi ĐKMH (đăng kí môn học)?
 ...........
@@ -67,7 +67,7 @@ Lựa chọn node js vì ... nó đơn giản khi viết app nhỏ, cài đặt 
 
 Mình sẽ tạo một con server hóng fb của đối tượng đang khóa và khi đối tượng active thì nó sẽ gửi mail thông báo cho mình. Việc này giống với việc mình ngồi chờ bấm F5, nhưng khác ở chỗ mình sẽ nhờ con bot làm culi giúp mình hóng
 
-![like-a-boss](http://blogk.xyz/wp-content/uploads/2016/12/like-a-boss.jpg)
+![like-a-boss](../media/like-a-boss.jpg)
 
 #### Viết code:
 
