@@ -1,4 +1,4 @@
-title: Cách sử dụng jQuery plugins trong VueJS
+title: Cách sử dụng các plugins jQuery trong VueJS
 catalog: true
 tags:
   - vuejs
