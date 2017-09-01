@@ -12,6 +12,7 @@ categories:
 date: 2016-06-12 01:31:37
 subtitle:
 header-img:
+author: Minh
 ---
 
 Xin chào 500 anh em!

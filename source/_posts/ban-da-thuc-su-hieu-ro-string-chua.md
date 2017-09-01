@@ -13,6 +13,7 @@ categories:
 date: 2016-07-02 15:07:23
 subtitle:
 header-img:
+author: Minh
 ---
 
 Hồi trước đi làm test của mấy công ti thấy lạ sao họ cho nhiều câu về String thế, thực sự lúc đó tôi chỉ nghĩ **String** thì có đếch gì đâu nhỉ, chỉ là 1 mảng các char + vài hàm phụ thêm thôi chứ có gì đâu, cái cần quan tâm là Thread, là OOP kia kìa... Cho đến một ngày, tôi đã tò mò về nó và tìm hiểu, và mọi suy nghĩ hồi trước của tôi đã thay đổi... 

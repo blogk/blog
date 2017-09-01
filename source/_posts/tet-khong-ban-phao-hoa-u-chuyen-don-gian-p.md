@@ -12,6 +12,7 @@ categories:
 date: 2017-02-01 00:50:12
 subtitle:
 header-img:
+author: Minh
 ---
 
 Nếu bạn là công dân nước Việt thì hẳn bạn sẽ biết năm nay (năm con gà) sẽ không có bắn pháo hoa gì cả. Nghe đồn là tiền để dành cho dân nghèo (bạn tin thì tin chứ mình thì không tin đâu :p)

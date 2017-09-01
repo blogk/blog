@@ -12,6 +12,7 @@ categories:
 date: 2016-12-01 22:51:08
 subtitle:
 header-img:
+author: Minh
 ---
 
 Có bao giờ bạn quan tâm tới một người trên Facebook mà người này đang deactive tài khoản chưa?

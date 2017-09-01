@@ -16,6 +16,7 @@ categories:
 date: 2017-06-15 00:23:58
 subtitle:
 header-img:
+author: Minh
 ---
 
 ### Js à, you can't "bối rối" me anymore!
