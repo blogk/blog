@@ -18,7 +18,7 @@ author: Minh
 Xin chào 500 anh em!
 Hôm nay mình sẽ giới thiệu cho các bạn một cái nhìn bao quát nhất và dễ hình dung nhất về thư viện **Socket.IO** trên Android. Mong rằng sau khi đọc bài viết các bạn có thể tự tay xây dựng nên một ứng dụng realtime nho nhỏ hoặc sẽ nảy ra những ý tưởng hay ho với thư viện này.
 
-![socket.io la gi](http://blogk.xyz/wp-content/uploads/2016/06/socketio-1.png)
+![socket.io la gi](../media/socketio-1.png)
 
 Let's go!
 <!--more-->
@@ -58,32 +58,32 @@ Thêm dependency vào build.gradle:
 *   appcompat-v7 (lấy theme cho ảo ảo tí)
 *   socket.io (thiếu thì vứt đi nhé =)) )
 
-<pre>
+```
 // app/build.gradle
 dependencies {
     ....
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.github.nkzawa:socket.io-client:0.3.0'
 }
-</pre>
+```
 
 Làm xong bước này các bạn phải rebuild project để chắc chắn rằng Android Studio đã giúp ta tải source liên quan đến project về máy.
 
 Thêm quyền truy cập internet vào AndroidManifest.xml
 
-<pre>
+```
 <!-- app/AndroidManifest.xml -->
     ...
     <uses-permission android:name="android.permission.INTERNET" />
     ...
 </manifest>
-</pre>
+```
 
 Tiếp theo, ta sẽ xây dựng một giao diện chat đơn giản gồm một listview chứa tin nhắn và một form nhập tin nhắn.
 
 Tạo một layout **"activity_main.xml"** với nội dung như sau:
 
-<pre lang='xml'>
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -115,11 +115,11 @@ Tạo một layout **"activity_main.xml"** với nội dung như sau:
     </TableRow>
 
 </LinearLayout>
-</pre>
+```
 
 Tạo một layout **"item_chat.xml"** với nội dung như sau:
 
-<pre lang='java'>
+```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -145,11 +145,11 @@ Tạo một layout **"item_chat.xml"** với nội dung như sau:
         android:text="Hello Socket.io"
         android:id="@+id/tv_message" />
 </LinearLayout>
-</pre>
+```
 
 Tạo một lớp **ItemChat** gồm thuộc tính username, message, các phương thức get, set tương ứng như sau:
 
-<pre lang='java'>
+```
 public class ItemChat {
 
     private String username;
@@ -176,11 +176,11 @@ public class ItemChat {
         this.message = message;
     }
 }
-</pre>
+```
 
 Tạo một **Adapter** cho Listview để gắn dữ liệu vào nó:
 
-<pre lang='java'>
+```
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -238,13 +238,13 @@ public class ChatAdapter extends BaseAdapter {
         return convertView;
     }
 }
-</pre>
+```
 
 Bước chuẩn bị view đã xong, bây giờ ta sẽ thực hiện bước kết nối và truyền nhận dữ liệu bằng socket.io
 
 Tại **MainActivity.java** ta khởi tạo một đối tượng socket có nhiệm vụ truyền nhận dữ liệu với server
 
-<pre lang='java'>
+```
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
@@ -254,11 +254,11 @@ private Socket mSocket;
         mSocket = IO.socket("http://chat.socket.io");
     } catch (URISyntaxException e) {}
 }
-</pre>
+```
 
 IO.socket() trả về một đối tượng socket mặc định giao tiếp với "http://chat.socket.io". Kết quả trả về từ phương thức này được lưu cache nên bạn có thể gọi nó mặc định ở các Activity hoặc Fragment khác (với cùng đối tượng socket với url tương ứng).
 
-<pre lang='java'>
+```
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -270,7 +270,7 @@ public void onDestroy() {
     super.onDestroy();
     mSocket.disconnect();
 }
-</pre>
+```
 
 Sau đó ta gọi hàm connect() để thực hiện kết nối. Việc kết nối nên được gọi đầu tiên lúc ứng dụng được bật lên và không liên quan tới vòng đời của các component Android (Activity, Fragment, Service). Tuy nhiên để ví dụ này đơn giản nhất, mình sẽ gắn nó với vòng đời của activity (gọi hàm connect() tại onCreate(), disconnect() tại onDestroy()).
 
@@ -278,7 +278,7 @@ Sau đó ta gọi hàm connect() để thực hiện kết nối. Việc kết n
 
 Để hứng event từ server trả về, ta sẽ đăng kí sự kiện với tên của event đó tương ứng
 
-<pre lang='java'>
+```
 @Override
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -294,11 +294,11 @@ public void onDestroy() {
     mSocket.disconnect();
     mSocket.off("new message", onNewMessage);
 }
-</pre>
+```
 
 với **"new message"** là tên của sự kiện, **onNewMessage** là một đối tượng xử lí dữ liệu khi được gọi về, khi activity bị ẩn hoàn toàn ta gọi mSocket.off() để tắt lắng nghe sự kiện
 
-<pre lang='java'>
+```
 import com.github.nkzawa.emitter.Emitter;
 
 Emitter.Listener onNewMessage = new Emitter.Listener() {
@@ -322,7 +322,7 @@ Emitter.Listener onNewMessage = new Emitter.Listener() {
         });
     }
 };
-</pre>
+```
 
 Với mỗi listener được tạo ra ta phải cài đè phương thức call() tương ứng. Bởi vì hàm gọi lại (callback) này có thể được gọi từ bất kì luồng (thread) nào của chương trình nên để chắc chắn nhất ta phải để nó trong luồng chính để việc cập nhật UI không bị lỗi.
 
@@ -330,7 +330,7 @@ Với mỗi listener được tạo ra ta phải cài đè phương thức call(
 
 Socket.IO hoạt động 2 chiều (truyền, nhận dữ liệu). Điều đó có nghĩa ta có thể vừa nhận dữ liệu từ server vừa có thể gửi thông điệp tới server bất kì lúc nào. Ở đây, sau khi kết nối thành công ta sẽ gửi một thông điệp để đăng kí với server tên, để mỗi lần gửi tin nhắn tới server có thể biết tên ta là gì. Nó giống với thủ tục check in khi vào một nơi nào đó vậy.
 
-<pre lang="java">
+```
 private static final String USERNAME = "Android User";
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -344,7 +344,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
     mSocket.emit("add user", USERNAME);
 }
-</pre>
+```
 
 Câu lệnh **emit(event_name, data)** có tham số truyền vào là:
 
@@ -353,7 +353,7 @@ Câu lệnh **emit(event_name, data)** có tham số truyền vào là:
 
 Sau cùng, ta sẽ khởi tạo các view và thêm sự kiện gửi tin nhắn tương ứng khi người dùng nhấn nút send
 
-<pre lang='java'>
+```
 private Button btnSend;
 private EditText edtMsg;
 private ListView lvChat;
@@ -382,11 +382,11 @@ private void initViews() {
         }
     });
 }
-</pre>
+```
 
 -> chạy thử và xem kết quả nào :D
 
-![socket.io demo](http://blogk.xyz/wp-content/uploads/2016/06/socket.io-demo.png)
+![socket.io demo](../media/socket.io-demo.png)
 
 Các bạn thấy đấy, với **Socket.IO**, việc giao tiếp với server socket thật đơn giản phải không nào. Ta không cần bận tâm đến những câu cú phức tạp và điều khiển luồng thông tin thật rắc rối của socket - điều rất dễ xảy ra lỗi với những chương trình có nhiều sự kiện đến và đi. Việc ta làm ở đây chỉ đơn giản là **kết nối -> đăng kí lắng nghe sự kiện -> gửi sự kiện**, mọi rắc rối hãy để socket.IO lo :D
 
