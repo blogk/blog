@@ -13,12 +13,12 @@ header-img:
 
 Tiện hôm nay trời mưa nên đành ngồi lại công ty chút chờ tạnh mưa chút về nên rảnh rỗi ngồi ngoáy ngoáy vài dòng cho khuây khỏa.
 
-![](http://blogk.xyz/wp-content/uploads/2017/07/memory-limit.png)
+![](../media/memory-limit.png)
 
 Anh em trong giới WordPress hẳn nhìn đoạn lỗi này sẽ thấy quen quen =))
-`
+```
 Fatal error: Allowed memory size of xxxxxx bytes exhausted (tried to allocate xx bytes)
-`
+```
 
 Thỉnh thoảng mình rất phát bực vì mấy lỗi này mà méo biết làm thế nào? Ví dụ như khi cần tải file hay đọc **file dung lượng lớn**, **giải nén file** hay một tiến trình phải xử lý rất nhiều logic chẳng hạn, một số site dở dở ương ương rất hay oẳng.
 <!--more-->
@@ -65,13 +65,13 @@ Phần hay ho nhất nằm ở đây.
 
 Là một **WordPress developer** chắc hẳn có lúc bạn sẽ gặp những pha xử lý cần rất nhiều memory của hệ thống mà memory bị giới hạn và nó cứ oẳng mà không biết kêu ai. Thì lúc đó thì phải tự thân vận động thôi, không thể chờ bọn admin của mấy cái site kia tăng memory lên được. Lạy trời!
 
-![](http://blogk.xyz/wp-content/uploads/2017/07/praying.jpg)
+![](../media/praying.jpg)
 
 Thật may **WordPress Core** đã hiển linh, từ phiên bản 4.6 trở đi, WordPress cung cấp 1 function hay vãi cả đái luôn.
 
-<pre lang="php">
+```
 wp_raise_memory_limit($context)
-</pre>
+```
 
 Nhiệm vụ của nó là tăng ngay **memory_limit** tại thời điểm đang thực thi. **$context** là bối cảnh mà bạn gọi nó ra. Bạn cũng có thể tạo riêng context riêng rồi đặt `memory_limit` lên to chà bá cũng được (à nhưng vừa vừa thôi nhé không to quá méo tăng được đâu). Bạn muốn biết hàm đó nó làm gì trong đó thì cứ mở ra mà xem nhé.
 
