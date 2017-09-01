@@ -15,7 +15,7 @@ header-img:
 
 Là những Dev bá đạo chúng ta đều biết đến **Git** để quản lý source code. Và thỉnh thoảng khi làm việc trong 1 team bạn hay gặp trường hợp 2 ông hay cả team suốt ngày bị xung đột mợt lên mợt xuống vì mấy **file rác** như file biên dịch, log, config, bờ la bờ la. Và thế là **Gitignore** đã ra đời để giải quyết vấn đề đó.
 
-![gitignore](http://blogk.xyz/wp-content/uploads/2016/07/gitignore.jpg)
+![gitignore](../media/gitignore.jpg)
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Khi add 1 file mới vào git, git sẽ kiểm tra danh sách những thằng s�
 
 Hoặc đơn giản bạn vào [gitignore.io](https://www.gitignore.io/) sau đó chọn loại project mình đang làm. Ví dụ như mình đang dùng WebStorm (của Jetbrains) và code Node.js:
 
-![gitignore.io](http://blogk.xyz/wp-content/uploads/2016/07/gitignore.io_.png)
+![gitignore.io](../media/gitignore.io_.png)
 
 Sau đó nó sẽ tạo ra 1 file .gitignore ngon lành cho bạn. Ví dụ như 1 project **Node.js** nó sẽ kiểu như thế này:
 
@@ -102,7 +102,7 @@ Bất cứ project nào cũng nên dùng nó, bạn nên tạo ngay file **.giti
 
 Giả dụ thế này! Bạn vừa join vào project và thấy project suốt ngày bị conflict vì mấy file rác nhưng may quá bạn đọc được bài viết này và bạn rất thông minh nên đã tạo luôn file **.gitignore** cho project và thêm luôn file rác đó vào .gitignore rồi bạn xóa file rác đi và commit lên. Rồi sao! 1 ông khác lại pull code mới về lại tạo ra file rác đó và nó vẫn dính vào git bình thường. Đờ heo? "**Em cho nó vào .gitignore rồi cơ mà?**.
 
-![but-why](http://blogk.xyz/wp-content/uploads/2016/07/but-why.jpg)
+![but-why](../media/but-why.jpg)
 
 Vì sao à? Vì file đó đã được thằng **git cache** thu nạp thành đồ đệ của nó rồi nên thằng git nó vẫn có quyền quản lý file đó. Vậy cách giải quyết đơn giản nó phải giải thoát file đó ra khỏi **git cache** là xong, bằng 1 **dòng lệnh thần thánh**:
 
