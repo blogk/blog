@@ -14,7 +14,7 @@ header-img:
 
 Hôm nay đổi gió chút, hôm nay chúng ta sẽ tìm hiểu 1 vấn đề khá quen thuộc trong [CSS](http://blogk.xyz/nhung-thuoc-tinh-quan-trong-khi-xay-dung-bo-cuc-website-phan-1/), tưởng dễ mà không dễ tưởng khó mà cũng chả khó:
 
-![Các kiểu căn giữa trong CSS](http://blogk.xyz/wp-content/uploads/2016/05/centering___-1.jpg)
+![Các kiểu căn giữa trong CSS](../media/centering___-1.jpg)
 
 **Các kiểu căn giữa trong CSS**
 
