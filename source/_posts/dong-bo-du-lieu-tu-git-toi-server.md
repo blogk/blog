@@ -36,7 +36,7 @@ Bạn để file git-hook.php ở 1 chỗ nào đó sao ta có thể truy cập 
 
 #### 3) Tiếp theo bạn vào phần setting của repo rồi chọn đến phần **Webhooks &amp; services** rồi chọn Add webhook:
 
-![git-webhook](http://blogk.xyz/wp-content/uploads/2015/11/git-webhook.png)
+![git-webhook](../media/git-webhook.png)
 
 #### 4) Tiếp đến là clone repo của mình lên server
 

@@ -29,11 +29,11 @@ Nhưng nếu chúng ta hiểu tường minh về **Specificity trong CSS** thì 
 - Elements: 1
 - Universal (*): 0
 
-![specificity](http://blogk.xyz/wp-content/uploads/2016/05/specificity.jpg)
+![specificity](../media/specificity.jpg)
 
 Ở đây không đề cập đến inline-style, dựa vào trọng số từng selector "nguyên tử" ta sẽ cộng lại để tạo ra sức mạnh của selector "tổng":
 
-![specificitywars-05v2](http://blogk.xyz/wp-content/uploads/2016/05/specificitywars-05v2.jpg)
+![specificitywars-05v2](../media/specificitywars-05v2.jpg)
 
 Như vậy đội quân nào (selector "tổng") **có sức mạnh lớn hơn** sẽ dành chiến thắng, tương ứng với selector sẽ được áp dụng.
 
@@ -123,7 +123,7 @@ Ta có 1 bảng các ví dụ minh hoạ nhé:
 
 Để khỏi tính toán mệt mỏi có thằng đã làm hẳn một website để [tính toán specificity](https://specificity.keegan.st/) nhé luôn này.
 
-![Specificity Calculator](http://blogk.xyz/wp-content/uploads/2016/05/Specificity-Calculator.png)
+![Specificity Calculator](../media/Specificity-Calculator.png)
 
 ### Thắc mắc nhỏ
 

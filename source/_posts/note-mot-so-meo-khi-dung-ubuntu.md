@@ -10,7 +10,7 @@ header-img:
 tags:
 ---
 
-![ubuntu2](http://blogk.xyz/wp-content/uploads/2016/05/ubuntu2.png)
+![ubuntu2](../media/ubuntu2.png)
 
 Note này chủ yếu viết với mục đích để note cho chính mình nên 1 số thứ mình viết rất ngắn gọn hoặc theo ý hiểu của mình nên mong các bạn thông cảm.<!--more-->
 

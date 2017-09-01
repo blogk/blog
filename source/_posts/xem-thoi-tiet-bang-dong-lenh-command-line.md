@@ -13,7 +13,7 @@ header-img:
 
 Hôm nay mình lang thang trên mạng thì bắt gặp trang web [này](http://wttr.in) khá hay dành cho dân Dev chúng ta. Nếu bạn là 1 Developer hay Coder hay đại loại thế thì bạn thường xuyên làm việc với dòng lệnh là điều dễ hiểu. Hôm nay mình sẽ giới thiệu cho các bạn cách **xem thời tiết bằng dòng lệnh** vô cùng bá đạo mà đơn giản.<!--more-->
 
-![get_info_weather](http://blogk.xyz/wp-content/uploads/2016/05/get_info_weather.png)
+![get_info_weather](../media/get_info_weather.png)
 
 Nếu bạn là 1 [Web developer](//blogk.xyz/category/web-development/) thì hẳn bạn biết đến **cURL** nhỉ? Ở đây chúng ta sẽ sử dụng cURL để lấy dữ liệu về.
 Để xem thông tin thời tiết bạn sử dụng lệnh sau:

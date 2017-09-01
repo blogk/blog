@@ -30,7 +30,7 @@ Nếu bạn đã từng sử dụng **JQuery**, bạn có biết đến **Ajax**
 Vậy nếu muốn **đồng bộ ở trong Node.js** thì sao?
 Thì trong **callback function** tương ứng ta gọi ra việc làm kế tiếp! Ban đầu mình cũng khá bối rối với điều này. Nếu có rất nhiều **callback lồng nhau** như vậy sẽ rất dễ gặp phải hiện tượng **callback hell**. Hoặc đơn giản hơn nữa thì sử dụng đến [async](https://www.npmjs.com/package/async) là xong.
 
-![icompile.eladkarako.com_callback_hell](http://blogk.xyz/wp-content/uploads/2016/05/icompile.eladkarako.com_callback_hell.gif)
+![icompile.eladkarako.com_callback_hell](../media/icompile.eladkarako.com_callback_hell.gif)
 Ví dụ thế này:
 <script src="https://gist.github.com/tutv95/57edd90558d21b6426b32dc9bae9b525.js"></script>
 

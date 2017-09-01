@@ -15,7 +15,7 @@ header-img:
 
 Hôm nay bất chợt tự ngồi tự sướng với [Blog](//blogk.xyz) xem chỉ số trong tab **Network** của [Chrome DevTools](https://developer.chrome.com/devtools) thấy kết quả hơi lạ file style.css chỉ có hơn 8 kb mà thực tế file đó có dung lượng tận đến ~ 36kb, tiếp tục test với [Web developer](//blogk.xyz/category/web-development/) tools trên **Firefox** thì mình đã dần hiểu ra.<!--more-->
 
-![nen_gzip](http://blogk.xyz/wp-content/uploads/2016/06/nen_gzip.png)
+![nen_gzip](../media/nen_gzip.png)
 
 Có 2 chỉ số mà chúng ta cần quan tâm là:
 - **Size**: Dung lượng thực tế của file đó.
@@ -33,32 +33,32 @@ Nó có thể nén các file tĩnh như HTML, CSS, Javascript hay 1 số documen
 
 ### Tương thích với các trình duyệt
 
-![gzip_support_browsers](http://blogk.xyz/wp-content/uploads/2016/06/gzip_support_browsers.png)
+![gzip_support_browsers](../media/gzip_support_browsers.png)
 
 Hầu hết các trình duyệt hiện nay đều hỗ trợ Gzip, còn nếu mà có thằng nào nào dùng trình duyệt mà không hỗ trợ Gzip thì chắc là trình duyệt đó từ thập kỉ trước rồi và kệ mọe nó đi.
 
 ### Hiệu năng
 
 Kết quả test với 1 số thư viện phổ biến cho kết quả gzip giảm được ~70-80%.
-![gzip_performance](http://blogk.xyz/wp-content/uploads/2016/06/gzip_performance.png)
+![gzip_performance](../media/gzip_performance.png)
 
 Theo 1 số tài liệu mình tìm được Gzip được hai bác **Jean-loup Gailly** và **Mark Adler** phát triển dựa trên thuật toán **DEFLATE** - nó là kết hợp của **LZ77** và **Huffman**. Các bạn nào thích nghiên cứu sâu hơn thì tự tìm hiểu chứ thực sự thì mình cũng méo có hiểu mấy thuật toán đó mà chỉ đọc cho biết thôi :)) Nôm na thì nó vẫn dựa và xác suất nhiều nên nhiều file gzip giảm dung lượng được rất nhiều nhưng nhiều file thì cũng được rất ít nhưng vẫn tương đối hiệu quả.
 
 Một ví dụ khác thử với file : **dashicons.min.css**
 
-![dashicons.min.css](http://blogk.xyz/wp-content/uploads/2016/06/dashicons.min_.css.png)
+![dashicons.min.css](../media/dashicons.min_.css.png)
 
 Gzip chỉ nén được khoảng 38%.
 
 ### Cơ chế hoạt động
 
-![gzip-how-it-work](http://blogk.xyz/wp-content/uploads/2016/06/gzip-how-it-work.png)
+![gzip-how-it-work](../media/gzip-how-it-work.png)
 - Bước 1: Trình duyệt gửi request tới server kèm theo tín hiệu: "Ê! Tao chấp nhận gzip nhé!" bằng cách gửi request mà trong header có chứa "**Accept-Encoding:gzip, deflate**"
 - Bước 2: Server đáp: "OK!" và kèm theo file đã được nén gzip cho trình duyệt. Tương tự response trả về cũng kèm theo tín hiệu "**Content-Encoding:gzip**" để trình duyệt biết là file này đã được Gzip.
 
 ### Nhược điểm
 
-![disadvantages](http://blogk.xyz/wp-content/uploads/2016/06/disadvantages.png)
+![disadvantages](../media/disadvantages.png)
 Cái gì thì cũng có hai mặt của nó và Gzip cũng không phải ngoại lệ. Trên ta nói rất nhiều ưu điểm của nó, vậy nhược điểm đằng sau đó là gì?
 
 #### Tương thích với trình duyệt
@@ -79,7 +79,7 @@ Hầu hết các **shared hosting** đều hỗ trợ gzip cả. Dể hiểu đ�
 
 Để biết website của bạn đã bật gzip chưa bạn có thể kiểm tra tại: [checkgzipcompression.com](http://checkgzipcompression.com) hay [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
-![gzip_check](http://blogk.xyz/wp-content/uploads/2016/06/gzip_check.png)
+![gzip_check](../media/gzip_check.png)
 
 Nếu câu trả lời là chưa thì bạn có thể làm theo hướng dẫn sau:
 

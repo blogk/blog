@@ -12,7 +12,7 @@ tags:
 
 Bài này mình sẽ nói về những nguyên tắc cơ bản nhưng cực kỳ quan trọng khi thiết kế bố cục, bày trí cho 1 trang web.
 
-![learn-layout](http://blogk.xyz/wp-content/uploads/2015/07/learn-layout.png)
+![learn-layout](../media/learn-layout.png)
 
 ### 1\. No layout
 
@@ -33,7 +33,7 @@ Một kiểu ẩn hiện khác là <span style="color:#E20461">visibility</span>
 
 ### 3\. margin: auto;
 
-![margin_auto](http://blogk.xyz/wp-content/uploads/2015/07/margin_auto.png)
+![margin_auto](../media/margin_auto.png)
 
 Cài đặt thuộc tính width cho một phần tử kiểu "**block-level**" sẽ ngăn chặn nó trải dài hết ra 2 bên mà nó có thể. Sau đó bạn có thể cài đặt thêm thuộc tính <span style="color:#E20461">margin:auto</span> để căn giữa theo chiều ngang.
 Nhưng lại có 1 vấn đề xảy ra khi chiều ngang của cửa sổ trình duyệt nhỏ hơn giá trị width mà bạn đã cho. Điều này dẫn đên việc người dùng sẽ phải kéo thanh cuộn ngang sang để xem được hết nội dung. Đừng lo lắng, chúng ta sẽ giải quyết vấn đề này ở phần tiếp theo! Let's go :]]
@@ -41,7 +41,7 @@ Nhưng lại có 1 vấn đề xảy ra khi chiều ngang của cửa sổ trìn
 ### 4\. max-width
 
 Sử dụng **max-width** thay vì dùng width để cải thiện cho những màn hình trình duyệt cỡ nhỏ. Điều này cực kì quan trọng khi bạn muốn tạo một **website responsive**.
-![max_width](http://tutran.net/wp-content/uploads/max_width.png)
+![max_width](../media/max_width.png)
 Hỗ trợ: **max-width** được hỗ trợ trên tất cả các trình duyệt và <span style="color:#E20461">IE7</span> trở lên.
 
 ### 5\. Mô hình khối
@@ -53,7 +53,7 @@ Nếu bạn set with cho 1 phần tử nhưng nó sẽ có thể to hơn như b�
 <script src="https://gist.github.com/tutv95/bb114c298b6002758ece839d0db030c6.js"></script>
 
 Và đây là kết quả:
-![box_model](http://tutran.net/wp-content/uploads/box_model.png)
+![box_model](../media/box_model.png)
 Bạn có thể thấy phần bên trong nội dung của box đều có chiều rộng như nhau (500px), nhưng ở box có class **fancy** thì to hơn là do có **padding** và **border** lớn hơn nên nó sẽ phình ra rộng hơn.
 
 Vậy để 2 ô bằng nhau thì ta cần có phép tính để căn chỉnh with sao cho phù hợp. Nhưng thật may mắn ta không cần phải làm thế...
@@ -66,7 +66,7 @@ Vậy để 2 ô bằng nhau thì ta cần có phép tính để căn chỉnh wi
 
 Và đây là kết quả, cả 2 box có chiều dài bằng nhau mặc dù chúng có **padding** và **border** không bằng nhau:
 
-![box-sizing](http://blogk.xyz/wp-content/uploads/2015/07/box-sizing.png)
+![box-sizing](../media/box-sizing.png)
 
 Việc điều chỉnh như thế này là rất hay nên nhiều lập trình viên muốn tất cả các phần tử đều có thuộc tính này bằng cách sử dụng **universal selector**:
 <script src="https://gist.github.com/tutv95/7f0cb42cfd4c3fea4acc8ae22a9d7138.js"></script>

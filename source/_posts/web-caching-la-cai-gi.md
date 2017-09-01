@@ -15,7 +15,7 @@ header-img:
 
 **Web caching** là việc sao lưu các bản sao tài liệu web sao cho đáp ứng nhanh nhất tới người dùng. Về mặt ưu điểm thì khỏi nói, nó giúp giảm thiểu băng thông, giúp người dùng tải nhanh website và có trải nghiệm tốt hơn, còn server thì giảm được gánh nặng.<!--more-->
 
-![web-caching](http://blogk.xyz/wp-content/uploads/2016/04/web-caching.jpeg)
+![web-caching](../media/web-caching.jpeg)
 
 ### Thử ví dụ thực tế với Web nhé
 
@@ -25,7 +25,7 @@ header-img:
 
 Khi bạn ăn phở thì bạn thường sẽ gọi thêm rau hoặc thêm ít ớt, tỏi ngâm gì đó, nó cũng giống như các file static như ảnh ọt, css, script,... nó sẽ được mang ra cùng với bát phở của bạn. Nhưng nếu bạn ăn thêm bát phở nữa với vẫn rau đó, ớt đó thì có thể họ chỉ bê cho bạn thêm bát phở nữa vì rau rợ, ớt iếc vẫn còn đó và bạn có thể sử dụng tiếp. Cái này nó cũng gần giống như **caching ở trình duyệt** vậy, các dữ liệu tình có thể sử dụng nhiều lần và **được lưu ở máy người dùng** mà **không cần phải request** đến server.
 
-![an-pho-vs-web-caching](http://blogk.xyz/wp-content/uploads/2016/04/an-pho-vs-web-caching.jpg)
+![an-pho-vs-web-caching](../media/an-pho-vs-web-caching.jpg)
 
 ### Dữ liệu đã lỗi thời
 

@@ -39,7 +39,7 @@ Priority — 10
 
 Sau bước này nó sẽ báo **Domain connected**.
 
-![Domain connected](http://blogk.xyz/wp-content/uploads/2016/05/connected_domain.png)
+![Domain connected](../media/connected_domain.png)
 
 Tiếp bạn có thể tạo bất kì email nào theo domain mà bạn vừa xác nhận. Sau khi tạo bạn phải đăng nhập vào email đó để **hoàn tất đăng ký**.
 
