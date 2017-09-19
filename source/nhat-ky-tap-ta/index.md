@@ -32,7 +32,7 @@ Còn bài leg press hiệp 3 được 12 rep ở mức tạ 240kg, đến hiệp
 
 ### Thứ hai, ngày 18/09/2017
 
-Đầu tuần theo chuẩn quốc tế thì cứ tập ngực ta phang :))
+Đầu tuần theo chuẩn quốc tế thì cứ tập ngực ta phang :)) Thường thì T2 tập ngưc, T3 tập chân, à dạo này T3 đi đá bóng với công ty nên chuyển bài tập chân xuống cuối tuần.
 Sáng dậy cảm giác vẫn hơi thiếu ngủ, trưa thế nào mải chơi bi lắc với mấy ông ở công ty thế là cũng chả ngủ nghê gì.
 Đến chiều tối hơi phê phê vì thiếu ngủ thế là phang ngay 1 cốc cà phê vào cho tỉnh :))
 
