@@ -29,3 +29,14 @@ Hôm thứ hai cân được gần 61kg.
 
 Hôm nay là **leg day**. Sumo deadlift được 4 hiệp và hiệp cuối được 60kg, back squat 50kg ở 2 hiệp cuối với 12 rep.
 Còn bài leg press hiệp 3 được 12 rep ở mức tạ 240kg, đến hiệp 4 định giữ nguyên mức tạ và cố tập đủ 12 rep, nhưng mà tập được 5 rep nhạc chuyển sang bài "Cho Em Gần Anh Thêm Chút Nữa" nghe mấy câu "1 chút nữa thôi,.." mà mình méo thể nào thêm được 1 chút nữa và dừng lại ở rep thứ 10 =)) Đùa chứ đang tập hăng, lúc đầu thì toàn nhạc của Sia, Maroon 5, US UK các kiểu con đà điểu tự dưng chuyển sang bài việt rồi nhạc nó từ từ đến nao lòng mà không thể nào đẩy tạ được nữa =)) Quỳ!
+
+### Thứ hai, ngày 18/09/2017
+
+Đầu tuần theo chuẩn quốc tế thì cứ tập ngực ta phang :))
+Sáng dậy cảm giác vẫn hơi thiếu ngủ, trưa thế nào mải chơi bi lắc với mấy ông ở công ty thế là cũng chả ngủ nghê gì.
+Đến chiều tối hơi phê phê vì thiếu ngủ thế là phang ngay 1 cốc cà phê vào cho tỉnh :))
+
+Thật tuyệt vời nhờ cốc cà phê mà tập xung hơn hẳn. Tập bài Dumbbell Bench Press hôm nay chơi tận tới 26kg mỗi bên (bình thường là 22 hoặc cùng lắm là 24kg).
+Tiếp theo tập thêm bài cho ngực trên kết hợp với kiểu tập 3 hiệp liên tục và giảm tạ xuống sau mỗi hiệp, cảm thấy vào vãi đ' luôn, lúc về ép ngực cảm thấy đau luôn.
+À hôm nay đi tập 1 mình nên lúc giảm tạ không có lấy tạ ra hộ nên đã mạnh dạn nhờ 1 bạn nữ xinh đẹp gần đó lấy tạ hộ và sau đó cảm ơn bạn ý :))
+Nói chung là hôm nay tập khá phê và hiệu quả.
